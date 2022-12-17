@@ -69,5 +69,141 @@ select {
 
 /* Global */
 body {
+  display: flex;
+  justify-content: center;
+
   background-color: #fff2de;
+
+  font-family: "Roboto", Helvetica, sans-serif;
+}
+
+.global-wrapper {
+  padding: 0 5px 0;
+}
+
+/* Header */
+header > * {
+  text-align: center;
+}
+
+.main-heading {
+  margin-bottom: 10px;
+
+  font-size: clamp(35px, 2.5rem, 40px);
+  font-weight: 900;
+}
+
+.tagline {
+  font-size: clamp(11.9px, 0.85rem, 13.6px);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 225px) {
+  .main-heading {
+    font-size: clamp(38.5px, 2.75rem, 46.75px);
+  }
+}
+
+@media screen and (min-width: 250px) {
+  .main-heading {
+    font-size: clamp(48.75px, 3.25rem, 52px);
+  }
+
+  .tagline {
+    font-size: clamp(14.25px, 0.95rem, 15.2px);
+  }
+}
+
+@media screen and (min-width: 290px) {
+  .main-heading {
+    font-size: clamp(52.5px, 3.5rem, 59.5px);
+  }
+
+  .tagline {
+    font-size: clamp(16px, 1rem, 18px);
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .main-heading {
+    font-size: clamp(52.5px, 3.75rem, 67.5px);
+  }
+
+  .tagline {
+    font-size: clamp(17.856px, 1.116rem, 20.088px);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .main-heading {
+    font-size: clamp(56px, 4rem, 68px);
+  }
+
+  .tagline {
+    font-size: clamp(20px, 1.25rem, 21.25px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .main-heading {
+    font-size: clamp(67.5px, 4.5rem, 85.5px);
+  }
+}
+
+@media screen and (min-width: 435px) {
+  header {
+    margin-top: 20px;
+  }
+
+  .main-heading {
+    font-size: clamp(41.25px, 2.75rem, 44px);
+  }
+
+  .tagline {
+    font-size: clamp(14.3px, 1.1rem, 17.6px);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .tagline {
+    font-size: clamp(18px, 1.2rem, 19.2px);
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .main-heading {
+    font-size: clamp(49px, 3.5rem, 56px);
+  }
+
+  .tagline span {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    margin-top: 60px;
+  }
+
+  .main-heading {
+    font-size: clamp(59.5px, 4.25rem, 72.25px);
+  }
+
+  .tagline {
+    font-size: clamp(16.25px, 1.25rem, 22.5px);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .main-heading {
+    font-size: clamp(55.25px, 4.25rem, 76.5px);
+  }
+
+  .tagline {
+    font-size: clamp(13.75px, 1.25rem, 22.5px);
+  }
+
+  .tagline span {
+    display: inline;
+  }
 }
