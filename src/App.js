@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "./Header.js";
+import Header from "./components/Header";
+import PasswordGenerator from "./components/PasswordGenerator";
 
 function App() {
   return (
     <>
       <Header />
+      <PasswordGenerator />
     </>
   );
 }
