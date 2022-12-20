@@ -223,10 +223,30 @@ header > * {
 /* PasswordGenerator */
 main {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
   max-width: 800px;
   margin: 0 auto;
+}
+
+.display-container,
+.strength-container {
+  width: 95vw;
+  max-width: 620px;
+}
+
+.display-container,
+.meter-container {
+  background-color: white;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+}
+
+@media screen and (min-width: 525px) and (max-width: 699px) {
+  .display-container,
+  .strength-container {
+    max-width: 508px;
+  }
 }
 
 /* Display */
@@ -235,19 +255,16 @@ main {
   justify-content: space-between;
   align-items: center;
 
-  width: 95vw;
-  max-width: 620px;
   padding: 15px 10px;
   border-radius: 5px;
-
-  box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
+  margin-bottom: 20px;
 
   background-color: white;
 }
 
-@media screen and (min-width: 525px) and (max-width: 700px) {
+@media screen and (min-width: 700px) {
   .display-container {
-    max-width: 508px;
+    margin-bottom: 30px;
   }
 }
 
@@ -324,4 +341,87 @@ button:focus-visible {
     width: 30px;
     height: 30px;
   }
+}
+
+/* Strength */
+.strength-header {
+  margin-bottom: 5px;
+
+  font-size: clamp(14px, 1rem, 20px);
+  font-weight: 700;
+}
+
+.strength-text {
+  font-size: clamp(15.4px, 1.1rem, 22px);
+  font-weight: 900;
+}
+
+@media screen and (min-width: 250px) {
+  .strength-header {
+    font-size: clamp(16.5px, 1.1rem, 22px);
+  }
+
+  .strength-text {
+    font-size: clamp(18px, 1.2rem, 24px);
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .strength-header {
+    font-size: clamp(18.2px, 1.3rem, 24.7px);
+  }
+
+  .strength-text {
+    font-size: clamp(19.6px, 1.4rem, 26.6px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .strength-header {
+    font-size: clamp(18.2px, 1.4rem, 26.6px);
+  }
+
+  .strength-text {
+    font-size: clamp(19.5px, 1.5rem, 28.5px);
+  }
+}
+
+.meter-container {
+  width: 100%;
+  height: 20px;
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.meter {
+  height: 100%;
+  border-radius: 12px;
+
+  transition: width 0.5s ease;
+}
+
+.meter[strength="0"] {
+  width: 10%;
+  background: rgba(219, 0, 0, 0.8);
+}
+
+.meter[strength="1"] {
+  width: 25%;
+  background: rgba(253, 0, 0, 0.8);
+}
+
+.meter[strength="2"] {
+  width: 50%;
+  background: rgba(245, 245, 0, 0.7);
+}
+
+.meter[strength="3"] {
+  width: 75%;
+  background: rgba(0, 172, 0, 0.9);
+}
+
+.meter[strength="4"] {
+  width: 102%;
+  background: rgba(0, 105, 0, 0.9);
 }
