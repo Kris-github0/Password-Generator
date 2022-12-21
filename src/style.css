@@ -358,6 +358,12 @@ button:focus-visible {
   margin-bottom: 50px;
 }
 
+@media screen and (min-width: 700px) {
+  .strength-container {
+    margin-bottom: 70px;
+  }
+}
+
 .strength-header {
   margin-bottom: 5px;
 
@@ -448,8 +454,56 @@ button:focus-visible {
 .configuration-header {
   margin-bottom: 5px;
 
-  font-size: 1.5rem;
+  font-size: clamp(24px, 1.6rem, 28.8px);
   font-weight: 700;
+}
+
+@media screen and (min-width: 250px) {
+  .configuration-header {
+    font-size: clamp(25.2px, 1.8rem, 36px);
+  }
+}
+
+@media screen and (min-width: 290px) {
+  .configuration-header {
+    font-size: clamp(26.6px, 1.9rem, 38px);
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .configuration-header {
+    font-size: clamp(29.4px, 2.1rem, 39.9px);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .configuration-header {
+    font-size: clamp(33px, 2.2rem, 46.2px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .configuration-header {
+    font-size: clamp(33.6px, 2.4rem, 48px);
+  }
+}
+
+@media screen and (min-width: 435px) {
+  .configuration-header {
+    font-size: clamp(26.6px, 1.9rem, 38px);
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .configuration-header {
+    font-size: clamp(33px, 2.2rem, 46.2px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .configuration-header {
+    font-size: clamp(32.2px, 2.3rem, 46px);
+  }
 }
 
 /* Length */
