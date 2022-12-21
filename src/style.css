@@ -81,6 +81,11 @@ body {
   padding: 0 5px 0;
 }
 
+button,
+.length-slider {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* Header */
 header {
   margin-bottom: 30px;
@@ -231,20 +236,28 @@ main {
 }
 
 .display-container,
-.strength-container {
+.strength-container,
+.configuration-options-container {
   width: 95vw;
   max-width: 620px;
 }
 
 .display-container,
-.meter-container {
+.configuration-options-container {
+  border-radius: 5px;
+}
+
+.display-container,
+.meter-container,
+.configuration-options-container {
   background-color: white;
   box-shadow: 0 2px 8px rgb(0 0 0 / 20%);
 }
 
 @media screen and (min-width: 525px) and (max-width: 699px) {
   .display-container,
-  .strength-container {
+  .strength-container,
+  .configuration-options-container {
     max-width: 508px;
   }
 }
@@ -256,7 +269,6 @@ main {
   align-items: center;
 
   padding: 15px 10px;
-  border-radius: 5px;
   margin-bottom: 20px;
 
   background-color: white;
@@ -295,8 +307,6 @@ button {
   background-color: white;
 
   cursor: pointer;
-
-  -webkit-tap-highlight-color: transparent;
 }
 
 button:focus-visible {
@@ -344,6 +354,10 @@ button:focus-visible {
 }
 
 /* Strength */
+.strength-container {
+  margin-bottom: 50px;
+}
+
 .strength-header {
   margin-bottom: 5px;
 
@@ -424,4 +438,77 @@ button:focus-visible {
 .meter[strength="4"] {
   width: 102%;
   background: rgba(0, 105, 0, 0.9);
+}
+
+/* Configuration */
+.configuration-options-container {
+  padding-top: 20px;
+}
+
+.configuration-header {
+  margin-bottom: 5px;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Length */
+.length-container {
+  display: flex;
+  align-items: center;
+
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.length-input {
+  width: 55px;
+  height: 40px;
+  padding-left: 4px;
+  border-radius: 5px;
+  border-color: black;
+  margin-right: 5px;
+
+  font-size: clamp(13px, 1rem, 18px);
+}
+
+@media screen and (min-width: 400px) {
+  .length-input {
+    font-size: clamp(15.4px, 1.1rem, 19.8px);
+  }
+}
+
+.length-input:focus-visible {
+  outline: solid 2px black;
+  outline-offset: -1px;
+}
+
+.length-slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+}
+
+.length-slider::-webkit-slider-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background-color: #f97316;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.length-slider:focus {
+  outline: none;
+}
+
+.length-slider:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid black;
 }
