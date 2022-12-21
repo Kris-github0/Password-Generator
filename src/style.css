@@ -367,22 +367,42 @@ button:focus-visible {
 .strength-header {
   margin-bottom: 5px;
 
-  font-size: clamp(14px, 1rem, 20px);
+  font-size: clamp(16.5px, 1.1rem, 22px);
   font-weight: 700;
 }
 
 .strength-text {
-  font-size: clamp(15.4px, 1.1rem, 22px);
+  font-size: clamp(18px, 1.2rem, 24px);
   font-weight: 900;
 }
 
 @media screen and (min-width: 250px) {
   .strength-header {
-    font-size: clamp(16.5px, 1.1rem, 22px);
+    font-size: clamp(18px, 1.2rem, 24px);
   }
 
   .strength-text {
+    font-size: clamp(18.2px, 1.3rem, 24.7px);
+  }
+}
+
+@media screen and (min-width: 325px) {
+  .strength-header {
+    font-size: clamp(18.2px, 1.4rem, 26.6px);
+  }
+
+  .strength-text {
+    font-size: clamp(19.5px, 1.5rem, 28.5px);
+  }
+}
+
+@media screen and (min-width: 435px) {
+  .strength-header {
     font-size: clamp(18px, 1.2rem, 24px);
+  }
+
+  .strength-text {
+    font-size: clamp(18.2px, 1.3rem, 24.7px);
   }
 }
 
