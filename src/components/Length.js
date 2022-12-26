@@ -26,7 +26,9 @@ function Length({ length, updateSettings }) {
         style={{
           background: `linear-gradient(
     to right,
-    #F97316 ${filteredLength}%,
+    ${getComputedStyle(document.body).getPropertyValue(
+      "--settings-theme"
+    )} ${filteredLength}%,
     rgba(200, 200, 200, 0.4) ${filteredLength}%
   )`,
         }}
