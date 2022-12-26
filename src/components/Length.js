@@ -1,11 +1,16 @@
 import React from "react";
 
 function Length({ length, updateSettings }) {
+  const octalNumber = String(length)[0] === "0";
+  const filteredLength = length >= 1 && !octalNumber ? Math.floor(length) : 1;
+
   return (
     <div className="length-container">
       <input
         className="length-input"
         type="number"
+        min="1"
+        max="100"
         name="length"
         onChange={updateSettings}
         value={length}
@@ -17,12 +22,12 @@ function Length({ length, updateSettings }) {
         max="100"
         name="length"
         onChange={updateSettings}
-        value={length}
+        value={filteredLength}
         style={{
           background: `linear-gradient(
     to right,
-    #F97316 ${length}%,
-    rgba(200, 200, 200, 0.4) ${length}%
+    #F97316 ${filteredLength}%,
+    rgba(200, 200, 200, 0.4) ${filteredLength}%
   )`,
         }}
       />
