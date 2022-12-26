@@ -286,6 +286,7 @@ output {
 
   font-size: clamp(18.2px, 1.4rem, 30.8px);
   font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 @media screen and (min-width: 400px) {
