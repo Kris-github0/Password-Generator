@@ -284,8 +284,8 @@ main {
 output {
   overflow: hidden;
 
-  font-size: 1.4rem;
   font-size: clamp(18.2px, 1.4rem, 30.8px);
+  font-weight: 500;
 }
 
 @media screen and (min-width: 400px) {
