@@ -10,7 +10,7 @@ function Display({ password, copy, generatePassword }) {
 
   return (
     <section className="display-container">
-      <output>{password ? password : <Error />}</output>
+      <output form="configuration">{password ? password : <Error />}</output>
       <div className="action-buttons-container">
         <button
           className="regenerate-button"
