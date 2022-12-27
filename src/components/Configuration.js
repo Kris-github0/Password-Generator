@@ -6,7 +6,11 @@ function Configuration({ settings, updateSettings }) {
     <section className="configuration-container">
       <h2 className="configuration-header">Settings</h2>
       <div className="configuration-options-container">
-        <form onSubmit={(e) => e.preventDefault()} noValidate>
+        <form
+          id="configuration"
+          onSubmit={(e) => e.preventDefault()}
+          noValidate
+        >
           <Length length={settings.length} updateSettings={updateSettings} />
           <div className="fieldset-container">
             <fieldset className="include-container">
