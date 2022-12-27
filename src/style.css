@@ -356,6 +356,93 @@ button:focus-visible {
   }
 }
 
+/* Error */
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px;
+  border: 1px solid rgb(255, 143, 143);
+  border-radius: 8px;
+
+  background-color: #ffadad;
+
+  white-space: pre-wrap;
+}
+
+.error-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  font-size: 24px;
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgb(255, 61, 61);
+}
+
+.error-text {
+  display: none;
+
+  color: rgb(150, 28, 28);
+}
+
+@media screen and (min-width: 250px) {
+  .error-container {
+    justify-content: center;
+
+    padding: 5px;
+  }
+
+  .error-circle {
+    width: 50%;
+    max-width: 30px;
+    margin-right: 5px;
+  }
+
+  .error-text {
+    display: block;
+
+    font-size: clamp(11.578125px, 0.890625rem, 14.25px);
+  }
+}
+
+@media screen and (min-width: 290px) {
+  .error-container {
+    max-width: 170px;
+  }
+
+  .error-circle {
+    margin-right: 10px;
+  }
+
+  .error-text {
+    font-size: clamp(15px, 1rem, 16px);
+  }
+}
+
+@media screen and (min-width: 435px) {
+  .error-container {
+    max-width: 310px;
+
+    padding: 15px;
+  }
+
+  .error-circle {
+    width: 35px;
+    max-width: 35px;
+    height: 35px;
+
+    font-size: 28px;
+  }
+
+  .error-text {
+    font-size: clamp(14px, 1rem, 17px);
+  }
+}
+
 /* Strength */
 .strength-container {
   margin-bottom: 50px;
@@ -442,6 +529,11 @@ button:focus-visible {
   border-radius: 12px;
 
   transition: width 0.65s ease;
+}
+
+.meter[strength="-1"] {
+  width: 0%;
+  background: rgb(194, 0, 0);
 }
 
 .meter[strength="0"] {

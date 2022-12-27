@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Error from "./Error";
 
 function Display({ password, copy, generatePassword }) {
   const [degree, setDegree] = useState(170);
@@ -9,15 +10,19 @@ function Display({ password, copy, generatePassword }) {
 
   return (
     <section className="display-container">
-      <output>{password}</output>
+      <output>{password ? password : <Error />}</output>
       <div className="action-buttons-container">
         <button
           className="regenerate-button"
           aria-label="Regenerate"
-          onClick={() => {
-            generatePassword();
-            rotate();
-          }}
+          onClick={
+            password
+              ? () => {
+                  generatePassword();
+                  rotate();
+                }
+              : () => {}
+          }
         >
           <svg
             style={{ transform: `rotate(${degree}deg)` }}
