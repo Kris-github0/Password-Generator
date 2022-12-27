@@ -26,7 +26,7 @@ function Strength({ password }) {
         </span>
       </h2>
       <div className="meter-container">
-        <div className="meter" strength={password ? score : ""}></div>
+        <div className="meter" strength={password ? score : -1}></div>
       </div>
     </section>
   );
