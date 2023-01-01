@@ -238,7 +238,8 @@ main {
 
 .display-container,
 .strength-container,
-.configuration-options-container {
+.configuration-options-container,
+.FAQs-container {
   width: 95vw;
   max-width: 620px;
 }
@@ -698,6 +699,22 @@ button:focus-visible {
 }
 
 /* Options */
+.configuration-container {
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 435px) {
+  .configuration-container {
+    margin-bottom: 70px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .configuration-container {
+    margin-bottom: 100px;
+  }
+}
+
 .fieldset-container {
   display: flex;
   justify-content: space-between;
@@ -855,4 +872,332 @@ input[type="checkbox"]:checked::after {
   border-bottom: 3px solid white;
 
   transform: rotate(-50deg);
+}
+
+/* FAQ */
+.FAQs-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.FAQs-title {
+  margin-bottom: 20px;
+
+  font-size: clamp(26.6px, 1.9rem, 32.3px);
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (min-width: 325px) {
+  .FAQs-title {
+    font-size: clamp(34.5px, 2.3rem, 43.7px);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .FAQs-title {
+    font-size: clamp(35px, 2.5rem, 52.5px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .FAQs-title {
+    font-size: clamp(37.8px, 2.7rem, 48.6px);
+  }
+}
+
+@media screen and (min-width: 435px) {
+  .FAQs-title {
+    margin-bottom: 40px;
+
+    font-size: clamp(30px, 2rem, 38px);
+  }
+}
+
+@media screen and (min-width: 530px) {
+  .FAQs-title {
+    font-size: clamp(34.5px, 2.3rem, 43.7px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .FAQs-title {
+    font-size: clamp(35.1px, 2.7rem, 48.6px);
+  }
+}
+
+.FAQ-container {
+  padding-bottom: 10px;
+  border-bottom: 2px solid rgb(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question:focus-visible {
+  outline: none;
+}
+
+.question:focus-visible .plus {
+  outline: 3px solid black;
+  outline-offset: 10px;
+}
+
+.question-text {
+  max-width: 85%;
+
+  font-size: clamp(16.1px, 1.15rem, 19.55px);
+  font-weight: 500;
+}
+
+@media screen and (min-width: 325px) {
+  .question-text {
+    font-size: clamp(17.5px, 1.25rem, 22.5px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .question-text {
+    font-size: clamp(18.2px, 1.4rem, 25.2px);
+  }
+}
+
+@media screen and (min-width: 435px) {
+  .question-text {
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 525px) {
+  .question-text {
+    font-size: clamp(19.5px, 1.3rem, 23.4px);
+  }
+}
+
+.plus {
+  position: relative;
+
+  width: 15px;
+  height: 5px;
+  border-radius: 2px;
+  margin-right: 5px;
+
+  background-color: black;
+}
+
+.plus::after {
+  content: "";
+
+  position: absolute;
+  top: -5px;
+  right: 5px;
+
+  width: 5px;
+  height: 15px;
+  border-radius: 2px;
+
+  background-color: black;
+
+  transition: transform 0.5s ease;
+}
+
+input:checked + .question .plus::after {
+  transform: rotateZ(90deg);
+}
+
+.answer {
+  height: 0px;
+
+  opacity: 0;
+  overflow: hidden;
+
+  font-size: clamp(13.3px, 0.95rem, 17.1px);
+
+  transition: all 0.5s ease;
+}
+
+.answer span {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 325px) {
+  .answer {
+    font-size: clamp(14px, 1rem, 19px);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .answer {
+    font-size: clamp(16.2px, 1.08rem, 19.44px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .answer {
+    font-size: clamp(17.25px, 1.15rem, 20.7px);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .answer {
+    font-size: clamp(18px, 1.2rem, 20.4px);
+  }
+}
+
+.FAQ-container input {
+  display: none;
+}
+
+input:checked ~ .answer {
+  opacity: 1;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+}
+
+.do {
+  margin-bottom: 30px;
+}
+
+.do-title,
+.dont-title {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 5px;
+
+  font-size: clamp(24px, 1.5rem, 27px);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 325px) {
+  .do-title,
+  .dont-title {
+    font-size: clamp(24px, 1.6rem, 33.6px);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .do-title,
+  .dont-title {
+    font-size: clamp(23.8px, 1.7rem, 39.1px);
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .do-title,
+  .dont-title {
+    margin-bottom: 7px;
+
+    font-size: clamp(30px, 2rem, 42px);
+  }
+}
+
+.do-tick,
+.dont-x {
+  position: relative;
+
+  display: inline-block;
+
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 400px) {
+  .do-tick,
+  .dont-x {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.do-tick {
+  background-color: rgb(0, 185, 0);
+}
+
+.dont-x {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(240, 0, 0);
+}
+
+.do-tick::after {
+  content: "";
+
+  position: absolute;
+  left: 5px;
+  top: 9px;
+
+  width: 20px;
+  height: 9px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+
+  transform: rotate(-50deg);
+}
+
+@media screen and (min-width: 400px) {
+  .do-tick::after {
+    left: 7px;
+    top: 12px;
+
+    width: 25px;
+    height: 11px;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+  }
+}
+
+.dont-x svg {
+  width: 27px;
+  stroke: white;
+}
+
+@media screen and (min-width: 400px) {
+  .dont-x svg {
+    width: 35px;
+    stroke: white;
+  }
+}
+
+.do ul,
+.dont ul {
+  margin-left: 5px;
+  padding-left: 20px;
+
+  list-style: initial;
+}
+
+.do li,
+.dont li {
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 400px) {
+  .do li,
+  .dont li {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .do li,
+  .dont li {
+    margin-bottom: 15px;
+  }
 }
