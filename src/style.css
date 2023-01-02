@@ -690,11 +690,27 @@ button:focus-visible {
   -webkit-appearance: none;
 }
 
+.length-slider::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+
+  background-color: var(--settings-theme);
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .length-slider:focus {
   outline: none;
 }
 
 .length-slider:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid black;
+}
+
+.length-slider:focus-visible::-moz-range-thumb {
   outline: 3px solid black;
 }
 
