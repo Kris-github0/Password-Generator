@@ -650,8 +650,8 @@ button:focus-visible {
   width: 55px;
   height: 40px;
   padding-left: 4px;
+  border: 2px solid black;
   border-radius: 5px;
-  border-color: black;
   margin-right: 5px;
 
   font-size: clamp(13px, 1rem, 18px);
