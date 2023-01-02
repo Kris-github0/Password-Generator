@@ -306,6 +306,7 @@ output {
 
 button {
   border: transparent;
+  padding: 1px 6px;
   border-radius: 2px;
 
   background-color: white;
