@@ -59,7 +59,7 @@ function FAQ() {
           onClick={handleClick}
           tabIndex={0}
           onKeyDown={handleKeyDown}
-          aria-role="button"
+          role="button"
           aria-expanded={opened[0]}
         >
           <h3 className="question-text">
@@ -90,7 +90,7 @@ function FAQ() {
           onClick={handleClick}
           tabIndex={0}
           onKeyDown={handleKeyDown}
-          aria-role="button"
+          role="button"
           aria-expanded={opened[1]}
         >
           <h3 className="question-text">What makes a strong password?</h3>
@@ -121,7 +121,7 @@ function FAQ() {
           onClick={handleClick}
           tabIndex={0}
           onKeyDown={handleKeyDown}
-          aria-role="button"
+          role="button"
           aria-expanded={opened[2]}
         >
           <h3 className="question-text">
