@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import Display from "./Display";
+import Display from "./Display.js";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
