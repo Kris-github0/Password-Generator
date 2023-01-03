@@ -1,5 +1,5 @@
 import React from "react";
-import Length from "./Length";
+import Length from "./Length.js";
 
 function Configuration({ settings, updateSettings }) {
   return (

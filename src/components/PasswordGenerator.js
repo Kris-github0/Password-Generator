@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Display from "./Display/Display";
-import Strength from "./Strength";
-import Configuration from "./Configuration";
+import Display from "./Display/Display.js";
+import Strength from "./Strength.js";
+import Configuration from "./Configuration.js";
 
 function PasswordGenerator() {
   const [settings, setSettings] = useState(
