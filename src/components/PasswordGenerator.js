@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Display from "./Display";
+import Display from "./Display/Display";
 import Strength from "./Strength";
 import Configuration from "./Configuration";
 

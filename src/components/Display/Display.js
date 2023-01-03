@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Error from "./Error";
+import Error from "../Error";
 
 function Display({ password, copy, generatePassword }) {
   const [degree, setDegree] = useState(170);
