@@ -8,6 +8,15 @@ function Display({ password, copy, generatePassword }) {
     setDegree((prevDegree) => prevDegree + 360);
   }
 
+  function handleRegenerateButtonClick() {
+    if (!password) {
+      return;
+    }
+
+    generatePassword();
+    rotate();
+  }
+
   return (
     <section className="display-container">
       <output form="configuration">
@@ -17,14 +26,7 @@ function Display({ password, copy, generatePassword }) {
         <button
           className="regenerate-button"
           aria-label="Regenerate"
-          onClick={
-            password
-              ? () => {
-                  generatePassword();
-                  rotate();
-                }
-              : () => {}
-          }
+          onClick={handleRegenerateButtonClick}
         >
           <svg
             style={{ transform: `rotate(${degree}deg)` }}
