@@ -683,6 +683,7 @@ button:focus-visible {
 .length-slider::-webkit-slider-thumb {
   width: 30px;
   height: 30px;
+  border: none;
   border-radius: 50%;
 
   background-color: var(--settings-theme);
