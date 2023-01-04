@@ -959,6 +959,8 @@ input[type="checkbox"]:checked::after {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  outline: none;
 }
 
 .question:focus-visible {
