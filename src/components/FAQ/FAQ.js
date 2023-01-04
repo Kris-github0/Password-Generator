@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { getQuestionIndex, open, close } from "./helpers.js";
 
 function FAQ() {
   const [opened, setOpened] = useState([false, false, false]);
@@ -28,23 +29,6 @@ function FAQ() {
 
     opened[question] ? open(refs[question]) : close(refs[question]);
   }, [opened]);
-
-  function getQuestionIndex(target) {
-    return target.htmlFor
-      ? Number(target.htmlFor[1]) - 1
-      : Number(target.parentElement.htmlFor[1]) - 1;
-  }
-
-  function open(ref) {
-    ref.current.style.height = `${ref.current.scrollHeight}px`;
-
-    ref.current.style.opacity = "1";
-  }
-
-  function close(ref) {
-    ref.current.style.height = "0px";
-    ref.current.style.opacity = "0";
-  }
 
   return (
     <section className="FAQs-container">
