@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header.js";
 import PasswordGenerator from "./components/PasswordGenerator/PasswordGenerator.js";
-import FAQ from "./components/FAQ.js";
+import FAQ from "./components/FAQ/FAQ.js";
 
 function App() {
   return (
