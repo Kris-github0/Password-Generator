@@ -37,7 +37,7 @@ function PasswordGenerator() {
 
       togglePasswordBasedOnLength(name, value);
 
-      if (allInlcudeFieldsUnchecked(name, value)) {
+      if (allIncludeFieldsUnchecked(name, value)) {
         return oldSettings;
       }
 
@@ -119,7 +119,7 @@ function PasswordGenerator() {
     }
   }
 
-  function allInlcudeFieldsUnchecked(name, value) {
+  function allIncludeFieldsUnchecked(name, value) {
     const includeFields = ["lowercase", "uppercase", "numbers", "symbols"];
     return (
       includeFields.includes(name) &&
