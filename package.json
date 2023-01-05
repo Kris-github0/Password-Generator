@@ -9,7 +9,7 @@
   "main": "./src/index.js",
   "private": true,
   "scripts": {
-    "test": "jest --watch",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
     "dev": "webpack serve --config ./config/webpack.dev.cjs --open",
     "build": "webpack --config ./config/webpack.prod.cjs",
     "predeploy": "npm run build",
