@@ -1,12 +1,14 @@
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
 module.exports = {
   entry: { index: "./src/index.js" },
-  output: { assetModuleFilename: "favicon/[name][ext]" },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: "./src/favicon", to: "favicon" }],
+    }),
+  ],
   module: {
     rules: [
-      {
-        test: /\.(png|xml|ico|svg|webmanifest)/,
-        type: "asset/resource",
-      },
       {
         test: /\.m?js$/,
         exclude: /node_modules/,
